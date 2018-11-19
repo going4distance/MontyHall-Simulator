@@ -125,7 +125,6 @@ namespace Csharp_Montyhall
                     }
                 }
             }
-            //Console.Write("The host says is not door {0}.  \nThe player switches to {1}. ", notDoor, thisDoor);
             return (thisDoor);  // function returns the player's new selection.
         }
 
@@ -134,7 +133,6 @@ namespace Csharp_Montyhall
             // sent the door the player picked, the door with treasure, the number of doors
             // newPick is a random number from 1 to (number of doors -2).  notHere is where the host says there is no prize
             int notDoor = 0; int thisDoor = 0;
-            //Console.WriteLine("newPick = {0}.  notHere = {1}.", newPick, notHere);
             // Pick door the treasure is not behind.
             for (int x = 1; x <= doorNum; x++)
             {  
@@ -158,7 +156,6 @@ namespace Csharp_Montyhall
                     }
                 }
             }
-            //Console.Write("The host says is not door {0}.  \nThe player switches to {1}. ", notDoor, thisDoor);
             return (thisDoor);  // function returns the player's new selection.
         }
 
@@ -213,9 +210,7 @@ namespace Csharp_Montyhall
             {
                 guessDoor = myRnd.Next(1, doorNumber + 1);
                 playGuess = myRnd.Next(1, doorNumber + 1);
-                //Console.Write("T-door is {0}.", guessDoor);
-                //Console.Write("Player Guessed Door {0}  ", playGuess);
-
+                
                 if (guessDoor == playGuess)
                 {   // player guessed correctly on the first try
                     secondGuess = myRnd.Next(1, doorNumber);  // guesses a number from 1 to (number of doors -1).  Can't be first guess.
@@ -230,14 +225,8 @@ namespace Csharp_Montyhall
 
                 if (guessDoor == playGuess)
                 {
-                    //Console.Write("Correct.\n");
                     correctGuess++;
                 }
-                else
-                {
-                    //Console.Write("Incorrect.\n");
-                }
-
             }
             Console.WriteLine("\n{0} trials run, with {1} doors.  Player switches their choice", loopRuns, doorNumber);
             Console.WriteLine("Guessed Correctly: {0} times.  Success Rate = {1} %\n", correctGuess, correctGuess / loopRuns);
@@ -303,7 +292,6 @@ namespace Csharp_Montyhall
                 }
 
             }
-            //Console.WriteLine("You entered {0}", userNum);
             return (userNum);
         }
     }
