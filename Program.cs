@@ -87,8 +87,8 @@ namespace Csharp_Montyhall
         public static void DispExplain()
         {
             Console.WriteLine("The Monty Hall problem is a brain teaser.\n");
-            Console.WriteLine("Suppose you're on a game show, and you're given the choice of three doors: \nBehind one door is a prize.  Behind the others, nothing. \n" +
-                "Say you pick door No. 1, and the host, who knows what's behind the doors, \nopens door No. 3, which has nothing.");
+            Console.WriteLine("Suppose you're on a game show, and you're given the choice of three doors. \nBehind one door is a prize.  Behind the others, nothing. \n" +
+                "\nLets say you pick door No. 1.  \nThe host(who knows what's behind the doors) opens door No. 3, which has nothing.");
             Console.WriteLine("He then says to you, \"Do you want to pick door No. 2 instead?\" \nIs it to your advantage to switch your choice?\n");
             Console.WriteLine("It turns out, it IS to your advantage to switch your door choice.\nIt was mathmatically proven in 1975, for the show Lets Make A Deal.");
             Console.WriteLine("But despite the evidence, people refused to believe it!!  \nThis program simulates various Monty Hall choices, many many times, \nand displays the results.");
@@ -99,10 +99,11 @@ namespace Csharp_Montyhall
         {
             Console.WriteLine("\nWhy is switching the superior option?\n");
             Console.WriteLine("To start with, there is one prize and 3 doors.  A 1 in 3 chance of victory.");
-            Console.WriteLine("The host never reveals the prize, so he effectively eliminates a wrong choice\n");
-            Console.WriteLine("If you guessed the prize initially (a 1 in 3 chance), you are left with 2 bad choices.\nThe host will eliminate one of the 2 bad choices, and offer you the other losing option.");
-            Console.WriteLine("If you guessed incorrectly initially(a 2 in 3 chance), you are left with a good choice and a bad choice.\nThe host will eliminate the bad choice, and offer you the winning choice");
-            Console.WriteLine("\nSo if you always switch, you have a 1 in 3 chance to fail, and a 2 in 3 chance of success.\nThe host has doubled your chances of victory!");
+            Console.WriteLine("When the host reveals a door, it is never the prize door, so he effectively eliminates a wrong choice");
+            Console.WriteLine("\nIf you guessed the prize initially (a 1 in 3 chance), you are left with 2 bad choices.\nThe host will eliminate one of the 2 bad choices, and offer you the other losing option.");
+            Console.WriteLine("\nIf you guessed incorrectly initially(a 2 in 3 chance), you are left with a good choice and a bad choice.\nThe host will eliminate the bad choice, and offer you the winning choice");
+            Console.WriteLine("\nSo if your first guess is correct(1/3), switching loses.  If your first guess is wrong(2/3), switching wins");
+            Console.WriteLine("Therefore if you always switch, you have a 1 in 3 chance to fail, and a 2 in 3 chance of success.\nThe host has doubled your chances of victory!");
         }
 
             public static int NotThisDoor(int firstPick, int newPick, int doorNum)
